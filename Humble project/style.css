@@ -12,11 +12,13 @@
 
 body {
     background-color: #494f5c;
-    width: 100vw;
-    height: 100vh;   
+    width: 99vw;
+    height: 200vh;   
 }
 
 .navbar {
+    z-index: 1;
+    letter-spacing: 0.3px;
     position: fixed;
     width: 100%;
     height: 66px;
@@ -30,25 +32,31 @@ body {
     display: flex;
     background-color: #3b3e48;
     height: 66px;
-    width: calc(100vw - 23.5em);
+    width: calc(100vw - 13.5em);
     align-items: center
 }
 
 .navbar .navbar-content .humble-logo {
+    cursor: pointer;
     height: 50px;
     padding: 10px;
+    margin-left: 90px;
 }
 
 .navbar .navbar-content .navbar-items, .navbar-items-2{
     display: flex;
     background-color: #3b3e48;
-    line-height: px;
+    line-height: px; /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
     padding: 0 15px;
-    gap: 35px;
+    gap: 30px;
+}
+
+.navbar-items-2 {
+    gap: 40px;
 }
 
 a {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 900;
     color: #d5d9e1;
 }
@@ -62,6 +70,9 @@ a:hover {
     color: white;
     line-height: normal;
     background-color: #282c34;
+    width: 340px;
+    padding: 14px 16px;
+    border-radius: 5px;
 }
 
 ::placeholder {
@@ -70,18 +81,87 @@ a:hover {
 
 .navbar-search-bar button {
     cursor: pointer;
-    margin-left: 170px;
     background-color: #282c34;
     font-size: 19px;
     color: #d5d9e1;
-    
+    padding: 14px;
+    border-radius: 5px;
 }
 
 .navbar .navbar-content .navbar-search-bar {
-    width: 400px;
     border-radius: 5px;
     background-color: #282c34;
-    margin-left: 470px;
+    margin-left: 500px;
     margin-right: 10px;
-    padding: 14px 10px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.takeover-content, .mosiac-container {
+    width: 1500px;
+    height: 632px;
+}
+
+.mosiac-container {
+    position: absolute;
+    background-image: url("HUMBLE.png");
+    background-repeat: no-repeat;
+    top: 105px;
+}
+
+.mosiac-container .takeover-content {
+    padding: 3em 2.5em 2em;
+    line-height: 1.3em;
+    color: #ffffff;
+    position: relative;
+}
+
+.mosiac-container .takeover-content .title {
+    letter-spacing: 1.3px;
+    padding: 0px 0px;
+    font-weight: 900;
+    font-size: 2.5em;
+    text-shadow: 0 4px 0 rgba(86,62,62,0.3);
+    margin-bottom: 0.5em;
+}
+
+.mosiac-container .takeover-content .para {
+    width: 600px;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+    font-weight: 500;
+}
+
+strong {
+    font-weight: 900;
+    font-size: 1em;
+}
+
+.mosiac-container .takeover-content .para p {
+    display: block;
+    padding: 10px 0px;
+    font-size: 1.15em;
+    line-height: 1.8em;
+}
+
+.takeover-content .takeover-button .bundles-button {
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 40px 0px;
+    background-color: rgb(22, 159, 227);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    width: 370px;
+    height: 3.6em;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 40px 0px;
+    letter-spacing: 0.5px;
+}
+
+.takeover-content .takeover-button .bundles-button:hover {
+    background-color: rgb(23, 139, 197);
 }
