@@ -99,25 +99,25 @@ a:hover {
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .takeover-content, .mosiac-container {
     width: 1500px;
     height: 632px;
+    aspect-ratio: 16 / 9;
 }
 
 .mosiac-container {
-    position: absolute;
     background-image: url("HUMBLE.png");
     background-repeat: no-repeat;
-    top: 105px;
+    margin-top:105px;
 }
 
 .mosiac-container .takeover-content {
     padding: 3em 2.5em 2em;
     line-height: 1.3em;
     color: #ffffff;
-    position: relative;
 }
 
 .mosiac-container .takeover-content .title {
@@ -164,4 +164,62 @@ strong {
 
 .takeover-content .takeover-button .bundles-button:hover {
     background-color: rgb(23, 139, 197);
+}
+
+
+.featured-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    height: 350px;
+    width: 100%;
+}
+
+.featured-container {
+    max-width: 1500px;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.carousel-container .carousel {
+    display: flex;
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    gap: 40px;
+}
+.carousel img {
+    height: 260px;
+    object-fit: cover;
+    width: calc(100% / 3);
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+}
+
+.carousel-container i {
+    top: 50%;
+    height: 46px;
+    width: 46px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper i:first-child {
+    left: -23px;
+
+}
+
+.wrapper i:last-child { 
+    right: -23px;
 }
